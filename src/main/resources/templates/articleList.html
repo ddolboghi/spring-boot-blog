@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>블로그 글 목록</title>
+</head>
+<body>
+<h2>blog</h2>
+<button type="button" onclick="location.href='/logout'">로그아웃</button>
+<button type="button" id="create-btn" th:onclick="|location.href='@{/new-article}'|">글 등록</button>
+<div th:each="item : ${articles}">
+    <p th:text="${item.id}"></p>
+    <p th:text="${item.title}"></p>
+    <p th:text="${item.content}"></p>
+    <a th:href="@{/articles/{id}(id=${item.id})}">보러 가기</a>
+</div>
+
+<script src="/js/article.js"></script>
+</body>
+</html>

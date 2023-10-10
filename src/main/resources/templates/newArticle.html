@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>블로그 글</title>
+</head>
+<body>
+<div>
+    <input type="hidden" id="article-id" th:value="${article.id}">
+    <input type="text" placeholder="제목" id="title" th:value="${article.title}">
+    <textarea placeholder="내용" id="content" th:text="${article.content}"></textarea>
+    <button th:if="${article.id} != null" type="button" id="modify-btn">수정</button>
+    <button th:if="${article.id} == null" type="button" id="create-btn">등록</button>
+</div>
+
+<script src="/js/article.js"></script>
+</body>
+</html>

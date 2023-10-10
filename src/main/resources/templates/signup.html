@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>회원 가입</title>
+</head>
+<body>
+    <div>
+        <form th:action="@{/user}" method="POST">
+            <div>
+                <label for="inputEmail">Email address</label>
+                <input type="email" name="email" id="inputEmail">
+            </div>
+            <div>
+                <label for="inputPassword">Password</label>
+                <input type="password" name="password" id="inputPassword">
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

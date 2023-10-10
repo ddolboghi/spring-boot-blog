@@ -5,8 +5,10 @@ spring:
       hibernate:
         format_sql: true
     defer-datasource-initialization: true
-  datasource:
+  datasource: #데이터베이스 정보 추가
     url: jdbc:h2:mem:testdb
+    username: sa
+  #실제로 데이터베이스에 추가되는 데이터를 확인하기 위해 H2 콘솔 활성화
   h2:
     console:
       enabled: true
